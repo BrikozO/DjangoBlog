@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'accounts.apps.AccountsConfig',
     'blog_api.apps.BlogApiConfig',
+    'blogbot',
     'taggit',
     'social_django',
     'django_bootstrap5',
