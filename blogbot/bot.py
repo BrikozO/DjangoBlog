@@ -1,19 +1,12 @@
-import os
-
-import redis
 import requests
-import telebot
 from dotenv import load_dotenv
 from telebot import types
 
+from bot_config import bot, redis_client, response, basic_url
+
 load_dotenv()
 
-with redis.Redis(host=str(os.getenv('REDIS_HOST')), port=int(os.getenv('REDIS_PORT')), db=0) as redis_client:
-    bot = telebot.TeleBot(str(os.getenv('BOT_KEY')))
-
-    response = requests.get('http://127.0.0.1:8000/api/')
-
-
+with redis_client:
     def is_authorised(ignore_auth: bool = False):
         def auth_decorator_logic(func):
             def wrapper(*args, **kwargs):
@@ -68,7 +61,7 @@ with redis.Redis(host=str(os.getenv('REDIS_HOST')), port=int(os.getenv('REDIS_PO
     def post_list(message):
         markup = types.InlineKeyboardMarkup()
         for item in response.json().get('results'):
-            url = 'http://127.0.0.1:8000/api/' + str(item['id'])
+            url = basic_url + str(item['id'])
             markup.add(types.InlineKeyboardButton(item['title'], url=url))
         bot.send_message(message.from_user.id, 'Выберите пост', reply_markup=markup)
 
@@ -88,7 +81,7 @@ with redis.Redis(host=str(os.getenv('REDIS_HOST')), port=int(os.getenv('REDIS_PO
 
     def signup(message, login):
         password = message.text
-        sign_try = requests.post('http://127.0.0.1:8000/api/api-token-auth/',
+        sign_try = requests.post(basic_url + 'api-token-auth/',
                                  data={'username': login, 'password': password})
         if sign_try.json().get('token') is not None:
             redis_client.set(name=message.from_user.id, value=sign_try.json().get('token') + '|' + f'{login}')
