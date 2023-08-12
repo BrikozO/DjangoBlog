@@ -29,7 +29,6 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAuthorOrReadOnly]
     # permission_classes = (permissions.IsAdminUser, )
 
-
 # class UserPostList(generics.ListAPIView):
 #     queryset = Post.objects.all()
 #     serializer_class = PostSerializer
