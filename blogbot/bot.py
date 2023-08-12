@@ -1,10 +1,7 @@
 import requests
-from dotenv import load_dotenv
 from telebot import types
 
 from bot_config import bot, redis_client, response, basic_url
-
-load_dotenv()
 
 with redis_client:
     def is_authorised(ignore_auth: bool = False):
