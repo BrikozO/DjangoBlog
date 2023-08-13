@@ -880,7 +880,7 @@
   "pk": 2,
   "fields": {
     "password": "pbkdf2_sha256$600000$Da3IX4GEUurnZWy4lyuCbp$6p26fH6NN48qOIuV/y4Om94K5QdqkdM6fH7Rpv1Eldo=",
-    "last_login": "2023-08-02T10:29:47.866Z",
+    "last_login": "2023-08-13T16:55:36.737Z",
     "is_superuser": true,
     "username": "brikoz",
     "first_name": "",
@@ -934,7 +934,7 @@
   "pk": 7,
   "fields": {
     "password": "!YG5lgr01QGR3iIvOf4tBvnUCc7ewMAqmgzkRHLpy",
-    "last_login": "2023-08-01T16:22:09.188Z",
+    "last_login": "2023-08-13T16:55:19.921Z",
     "is_superuser": false,
     "username": "BrikozO",
     "first_name": "Oleg",
@@ -970,7 +970,7 @@
   "pk": 9,
   "fields": {
     "password": "pbkdf2_sha256$600000$kdmtrTpRcWoDDJgtm0QpqP$P/1jABO4HQ3Hu2dyK00LlA+Z9p7+6uiz7hrqLSJtWbs=",
-    "last_login": null,
+    "last_login": "2023-08-10T15:48:27.447Z",
     "is_superuser": false,
     "username": "Mashas",
     "first_name": "Masha",
@@ -1141,14 +1141,6 @@
   "fields": {
     "app_label": "authtoken",
     "model": "tokenproxy"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "b2u8mxsnt4tm6dnczp175xuw2zw8ftn3",
-  "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGln-rXEo6XMGa727xgGUSPlUiLtDpBTQvpl5L5VxW1veFpnzwOqinDr9bgXpIeMO-I7jbdI0jes8FL0r-qCL7ieW5_Vw_w4aLu1bA1BloGJNqiaiCcDdma3DEAU6g955cIV8iiIgFZIl6YKQNTX5wFa9P-HPN80:1qR96x:jVsvJv2d88IKWtQDU_uQmHszU8Og03cBxCX2AL49_Ic",
-    "expire_date": "2023-09-01T10:29:47.869Z"
   }
 },
 {
@@ -1399,9 +1391,9 @@
     "user": 7,
     "provider": "github",
     "uid": "69339223",
-    "extra_data": "{\"auth_time\": 1690906929, \"id\": 69339223, \"expires\": null, \"login\": \"BrikozO\", \"access_token\": \"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\", \"token_type\": \"bearer\"}",
+    "extra_data": "{\"auth_time\": 1691945719, \"id\": 69339223, \"expires\": null, \"login\": \"BrikozO\", \"access_token\": \"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\", \"token_type\": \"bearer\"}",
     "created": "2023-07-26T11:20:11.611Z",
-    "modified": "2023-08-01T16:22:09.183Z"
+    "modified": "2023-08-13T16:55:19.915Z"
   }
 },
 {
