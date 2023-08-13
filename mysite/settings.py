@@ -258,8 +258,8 @@ REST_FRAMEWORK = {
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      'rest_framework.authentication.SessionAuthentication',
-      'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
 
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -270,9 +270,8 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
-
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Blog API Project',
-    'DESCRIPTION': 'A sample blog to learn about DRF',
-    'VERSION': '1.0.0',
+    'DESCRIPTION': "Brikozo's blog API Project",
+    'VERSION': '1.0.1',
 }
