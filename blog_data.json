@@ -1,156 +1,130 @@
 [
 {
   "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-08-15T18:02:46.664Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Django",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-08-15T18:03:13.649Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Flask",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-08-15T18:03:47.577Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "FastAPI",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
   "pk": 4,
   "fields": {
-    "action_time": "2023-07-22T22:50:47.958Z",
-    "user": 2,
-    "content_type": 4,
-    "object_id": "1",
-    "object_repr": "admin",
-    "action_flag": 3,
-    "change_message": ""
+    "action_time": "2023-08-15T18:05:09.547Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Frameworks Battle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 5,
   "fields": {
-    "action_time": "2023-07-22T22:51:11.239Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "5",
+    "action_time": "2023-08-15T18:05:45.602Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
     "object_repr": "Django",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 6,
   "fields": {
-    "action_time": "2023-07-25T11:08:46.156Z",
-    "user": 2,
-    "content_type": 4,
+    "action_time": "2023-08-15T18:06:00.513Z",
+    "user": 1,
+    "content_type": 8,
     "object_id": "3",
-    "object_repr": "Hitlyar",
-    "action_flag": 3,
-    "change_message": ""
+    "object_repr": "FastAPI",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 7,
   "fields": {
-    "action_time": "2023-07-25T11:08:50.877Z",
-    "user": 2,
-    "content_type": 4,
+    "action_time": "2023-08-15T18:06:04.153Z",
+    "user": 1,
+    "content_type": 8,
     "object_id": "4",
-    "object_repr": "Masha",
-    "action_flag": 3,
-    "change_message": ""
+    "object_repr": "Frameworks Battle",
+    "action_flag": 2,
+    "change_message": "[]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 8,
   "fields": {
-    "action_time": "2023-07-26T11:49:39.405Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "6",
-    "object_repr": "Flask",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
+    "action_time": "2023-08-15T18:06:07.065Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Django",
+    "action_flag": 2,
+    "change_message": "[]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 9,
   "fields": {
-    "action_time": "2023-07-26T11:49:48.665Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "5",
-    "object_repr": "Django",
+    "action_time": "2023-08-15T18:06:12.256Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Flask",
     "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+    "change_message": "[]"
   }
 },
 {
   "model": "admin.logentry",
   "pk": 10,
   "fields": {
-    "action_time": "2023-07-26T11:50:18.123Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "7",
-    "object_repr": "Classes",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 11,
-  "fields": {
-    "action_time": "2023-07-26T11:50:37.275Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "6",
-    "object_repr": "Flask",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 12,
-  "fields": {
-    "action_time": "2023-07-26T11:50:42.490Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "7",
-    "object_repr": "Classes",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 13,
-  "fields": {
-    "action_time": "2023-07-26T11:51:28.028Z",
-    "user": 2,
-    "content_type": 7,
-    "object_id": "8",
-    "object_repr": "Пост 4",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 14,
-  "fields": {
-    "action_time": "2023-07-27T20:58:35.114Z",
-    "user": 2,
-    "content_type": 11,
-    "object_id": "1",
-    "object_repr": "localhost:8000",
-    "action_flag": 2,
-    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 15,
-  "fields": {
-    "action_time": "2023-08-02T10:29:59.344Z",
-    "user": 2,
-    "content_type": 20,
-    "object_id": "9",
-    "object_repr": "ccb991b36cbeabe63e203dfc61102303cf9f134f",
+    "action_time": "2023-08-15T18:06:16.245Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "FastAPI",
     "action_flag": 2,
     "change_message": "[]"
   }
@@ -375,216 +349,216 @@
   "model": "auth.permission",
   "pk": 25,
   "fields": {
-    "name": "Can add post",
+    "name": "Can add site",
     "content_type": 7,
-    "codename": "add_post"
+    "codename": "add_site"
   }
 },
 {
   "model": "auth.permission",
   "pk": 26,
   "fields": {
-    "name": "Can change post",
+    "name": "Can change site",
     "content_type": 7,
-    "codename": "change_post"
+    "codename": "change_site"
   }
 },
 {
   "model": "auth.permission",
   "pk": 27,
   "fields": {
-    "name": "Can delete post",
+    "name": "Can delete site",
     "content_type": 7,
-    "codename": "delete_post"
+    "codename": "delete_site"
   }
 },
 {
   "model": "auth.permission",
   "pk": 28,
   "fields": {
-    "name": "Can view post",
+    "name": "Can view site",
     "content_type": 7,
-    "codename": "view_post"
+    "codename": "view_site"
   }
 },
 {
   "model": "auth.permission",
   "pk": 29,
   "fields": {
-    "name": "Can add comment",
+    "name": "Can add post",
     "content_type": 8,
-    "codename": "add_comment"
+    "codename": "add_post"
   }
 },
 {
   "model": "auth.permission",
   "pk": 30,
   "fields": {
-    "name": "Can change comment",
+    "name": "Can change post",
     "content_type": 8,
-    "codename": "change_comment"
+    "codename": "change_post"
   }
 },
 {
   "model": "auth.permission",
   "pk": 31,
   "fields": {
-    "name": "Can delete comment",
+    "name": "Can delete post",
     "content_type": 8,
-    "codename": "delete_comment"
+    "codename": "delete_post"
   }
 },
 {
   "model": "auth.permission",
   "pk": 32,
   "fields": {
-    "name": "Can view comment",
+    "name": "Can view post",
     "content_type": 8,
-    "codename": "view_comment"
+    "codename": "view_post"
   }
 },
 {
   "model": "auth.permission",
   "pk": 33,
   "fields": {
-    "name": "Can add tag",
+    "name": "Can add comment",
     "content_type": 9,
-    "codename": "add_tag"
+    "codename": "add_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 34,
   "fields": {
-    "name": "Can change tag",
+    "name": "Can change comment",
     "content_type": 9,
-    "codename": "change_tag"
+    "codename": "change_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 35,
   "fields": {
-    "name": "Can delete tag",
+    "name": "Can delete comment",
     "content_type": 9,
-    "codename": "delete_tag"
+    "codename": "delete_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 36,
   "fields": {
-    "name": "Can view tag",
+    "name": "Can view comment",
     "content_type": 9,
-    "codename": "view_tag"
+    "codename": "view_comment"
   }
 },
 {
   "model": "auth.permission",
   "pk": 37,
   "fields": {
-    "name": "Can add tagged item",
+    "name": "Can add profile",
     "content_type": 10,
-    "codename": "add_taggeditem"
+    "codename": "add_profile"
   }
 },
 {
   "model": "auth.permission",
   "pk": 38,
   "fields": {
-    "name": "Can change tagged item",
+    "name": "Can change profile",
     "content_type": 10,
-    "codename": "change_taggeditem"
+    "codename": "change_profile"
   }
 },
 {
   "model": "auth.permission",
   "pk": 39,
   "fields": {
-    "name": "Can delete tagged item",
+    "name": "Can delete profile",
     "content_type": 10,
-    "codename": "delete_taggeditem"
+    "codename": "delete_profile"
   }
 },
 {
   "model": "auth.permission",
   "pk": 40,
   "fields": {
-    "name": "Can view tagged item",
+    "name": "Can view profile",
     "content_type": 10,
-    "codename": "view_taggeditem"
+    "codename": "view_profile"
   }
 },
 {
   "model": "auth.permission",
   "pk": 41,
   "fields": {
-    "name": "Can add site",
+    "name": "Can add tag",
     "content_type": 11,
-    "codename": "add_site"
+    "codename": "add_tag"
   }
 },
 {
   "model": "auth.permission",
   "pk": 42,
   "fields": {
-    "name": "Can change site",
+    "name": "Can change tag",
     "content_type": 11,
-    "codename": "change_site"
+    "codename": "change_tag"
   }
 },
 {
   "model": "auth.permission",
   "pk": 43,
   "fields": {
-    "name": "Can delete site",
+    "name": "Can delete tag",
     "content_type": 11,
-    "codename": "delete_site"
+    "codename": "delete_tag"
   }
 },
 {
   "model": "auth.permission",
   "pk": 44,
   "fields": {
-    "name": "Can view site",
+    "name": "Can view tag",
     "content_type": 11,
-    "codename": "view_site"
+    "codename": "view_tag"
   }
 },
 {
   "model": "auth.permission",
   "pk": 45,
   "fields": {
-    "name": "Can add profile",
+    "name": "Can add tagged item",
     "content_type": 12,
-    "codename": "add_profile"
+    "codename": "add_taggeditem"
   }
 },
 {
   "model": "auth.permission",
   "pk": 46,
   "fields": {
-    "name": "Can change profile",
+    "name": "Can change tagged item",
     "content_type": 12,
-    "codename": "change_profile"
+    "codename": "change_taggeditem"
   }
 },
 {
   "model": "auth.permission",
   "pk": 47,
   "fields": {
-    "name": "Can delete profile",
+    "name": "Can delete tagged item",
     "content_type": 12,
-    "codename": "delete_profile"
+    "codename": "delete_taggeditem"
   }
 },
 {
   "model": "auth.permission",
   "pk": 48,
   "fields": {
-    "name": "Can view profile",
+    "name": "Can view tagged item",
     "content_type": 12,
-    "codename": "view_profile"
+    "codename": "view_taggeditem"
   }
 },
 {
@@ -877,108 +851,18 @@
 },
 {
   "model": "auth.user",
-  "pk": 2,
+  "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$600000$Da3IX4GEUurnZWy4lyuCbp$6p26fH6NN48qOIuV/y4Om94K5QdqkdM6fH7Rpv1Eldo=",
-    "last_login": "2023-08-13T16:55:36.737Z",
+    "password": "pbkdf2_sha256$600000$n5QALoPADIR4n1D4p7QyXs$olS7YPdOhWJCQJWSO5bm+wcm3DSmyIdHmsTI/OQCcQA=",
+    "last_login": "2023-08-15T18:00:18.567Z",
     "is_superuser": true,
     "username": "brikoz",
     "first_name": "",
     "last_name": "",
-    "email": "moiap@gmail.com",
+    "email": "brikocorp@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2023-07-22T22:50:23.885Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 5,
-  "fields": {
-    "password": "pbkdf2_sha256$600000$VRb7P4Y3fIUrKxAwjgmQ5Q$SU07fWxfnKGksrbEnVd/ciuLbV7fAfF2HKw8Li8Nq68=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "Hitlyar",
-    "first_name": "Masha",
-    "last_name": "Shabsh",
-    "email": "masha.shabusheva99@mail.ru",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-07-25T11:29:01.832Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 6,
-  "fields": {
-    "password": "pbkdf2_sha256$600000$iohOuBY4oDtaVMeJ0CxHnG$hyxBI7xoBCq1Fb9EkCTxjHaeIYS4/PkqPsP+THe31mY=",
-    "last_login": "2023-07-25T12:15:46.522Z",
-    "is_superuser": false,
-    "username": "Hitlyar11",
-    "first_name": "Olezha",
-    "last_name": "Gydinid",
-    "email": "moiapochta232@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-07-25T12:15:19.500Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 7,
-  "fields": {
-    "password": "!YG5lgr01QGR3iIvOf4tBvnUCc7ewMAqmgzkRHLpy",
-    "last_login": "2023-08-13T16:55:19.921Z",
-    "is_superuser": false,
-    "username": "BrikozO",
-    "first_name": "Oleg",
-    "last_name": "",
-    "email": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-07-26T11:20:11.593Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 8,
-  "fields": {
-    "password": "!bYqBdl7p6BoeC0zACftKPQJW9H4DyquaIs5JSL8p",
-    "last_login": "2023-07-26T11:26:09.832Z",
-    "is_superuser": false,
-    "username": "moiapochta232",
-    "first_name": "Олег",
-    "last_name": "Якушев",
-    "email": "moiapochta232@gmail.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-07-26T11:26:09.812Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 9,
-  "fields": {
-    "password": "pbkdf2_sha256$600000$kdmtrTpRcWoDDJgtm0QpqP$P/1jABO4HQ3Hu2dyK00LlA+Z9p7+6uiz7hrqLSJtWbs=",
-    "last_login": "2023-08-10T15:48:27.447Z",
-    "is_superuser": false,
-    "username": "Mashas",
-    "first_name": "Masha",
-    "last_name": "Maia devyshka",
-    "email": "shabash@mail.ry",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-08-02T10:29:39.263Z",
+    "date_joined": "2023-08-15T17:59:22.002Z",
     "groups": [],
     "user_permissions": []
   }
@@ -1035,8 +919,8 @@
   "model": "contenttypes.contenttype",
   "pk": 7,
   "fields": {
-    "app_label": "blog",
-    "model": "post"
+    "app_label": "sites",
+    "model": "site"
   }
 },
 {
@@ -1044,12 +928,28 @@
   "pk": 8,
   "fields": {
     "app_label": "blog",
-    "model": "comment"
+    "model": "post"
   }
 },
 {
   "model": "contenttypes.contenttype",
   "pk": 9,
+  "fields": {
+    "app_label": "blog",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "accounts",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
   "fields": {
     "app_label": "taggit",
     "model": "tag"
@@ -1057,26 +957,10 @@
 },
 {
   "model": "contenttypes.contenttype",
-  "pk": 10,
+  "pk": 12,
   "fields": {
     "app_label": "taggit",
     "model": "taggeditem"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "sites",
-    "model": "site"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "accounts",
-    "model": "profile"
   }
 },
 {
@@ -1144,139 +1028,74 @@
   }
 },
 {
-  "model": "sessions.session",
-  "pk": "smozxr72mzlmq7uoui67i23b1fkzobrd",
-  "fields": {
-    "session_data": "e30:1qP85P:bw2Uf0hVDJqmy6Ce_emwOyyr8WaiPFMKhQ230_797lI",
-    "expire_date": "2023-08-26T20:59:51.223Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "zrs0ipndxlzn1031l91tb3q7qaw89vuw",
-  "fields": {
-    "session_data": ".eJxVjDsOwjAQBe_iGlnZ-LMxJX3OYK29Cw4gW8qnQtwdIqWA9s3Me6lI21ritsgcJ1ZnBer0uyXKD6k74DvVW9O51XWekt4VfdBFj43leTncv4NCS_nWvmMHGFIPZAOhy11I1COjMBsZrFjeSefJ5d4iGoRkRPA6gAdDQb0_1pg3dA:1q0GKj:x9BgMYEHogZJ8nlPfNIdOS7SXPABct3c3v7XcPnVzBI",
-    "expire_date": "2023-06-03T06:44:53.882Z"
-  }
-},
-{
   "model": "sites.site",
   "pk": 1,
   "fields": {
-    "domain": "localhost:8000",
-    "name": "localhost:8000"
+    "domain": "example.com",
+    "name": "example.com"
   }
 },
 {
   "model": "blog.post",
-  "pk": 5,
+  "pk": 1,
   "fields": {
     "title": "Django",
-    "author": 2,
-    "body": "О django и всяком таком",
-    "publish": "2023-07-22T22:50:50Z",
-    "created": "2023-07-22T22:51:11.238Z",
-    "updated": "2023-07-26T11:49:48.660Z",
+    "author": 1,
+    "body": "<div><div class=\"Kot7x\"><div id=\"kp-wp-tab-cont-overview\" data-hveid=\"CFAQAw\" data-ved=\"2ahUKEwiL_ILPn9-AAxVCiIsKHe9-AoYQydoBKAB6BAhQEAM\"><div class=\"aoPfOc\"><div id=\"kp-wp-tab-overview\" data-hveid=\"CGoQAA\" data-ved=\"2ahUKEwiL_ILPn9-AAxVCiIsKHe9-AoYQkt4BKAB6BAhqEAA\">   <div class=\"TzHB6b cLjAic LMRCfc\" data-hveid=\"CG0QAA\" data-ved=\"2ahUKEwiL_ILPn9-AAxVCiIsKHe9-AoYQ04gCKAB6BAhtEAA\"><div><div class=\"sATSHe\"><div><div class=\"B03h3d V14nKc i8qq8b ptcLIOszQJu__wholepage-card wp-ms\" data-hveid=\"CGgQAA\"><div class=\"UDZeY OTFaAf\"><div class=\"yxjZuf\"><div class=\"wDYxhc\" data-md=\"50\" style=\"clear:none\" data-hveid=\"CFQQAA\" data-ved=\"2ahUKEwiL_ILPn9-AAxVCiIsKHe9-AoYQkCl6BAhUEAA\"><div class=\"PZPZlf hb8SAc\" data-attrid=\"description\" data-hveid=\"CFQQAQ\" data-ved=\"2ahUKEwiL_ILPn9-AAxVCiIsKHe9-AoYQziAoAHoECFQQAQ\"><div><div class=\"kno-rdesc\"></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><span><b>Django</b>\r\n — свободный фреймворк для веб-приложений на языке Python, использующий \r\nшаблон проектирования MVC. Проект поддерживается организацией Django \r\nSoftware Foundation.\r\nСайт на Django строится из одного или нескольких приложений, которые \r\nрекомендуется делать отчуждаемыми и подключаемыми.</span><p></p>",
+    "publish": "2023-08-15T18:02:23Z",
+    "created": "2023-08-15T18:02:46.654Z",
+    "updated": "2023-08-15T18:06:07.062Z",
     "status": "PB",
     "slug": "django"
   }
 },
 {
   "model": "blog.post",
-  "pk": 6,
+  "pk": 2,
   "fields": {
     "title": "Flask",
-    "author": 2,
-    "body": "Flask - микрофреймворк",
-    "publish": "2023-07-26T11:49:09Z",
-    "created": "2023-07-26T11:49:39.398Z",
-    "updated": "2023-07-26T11:50:37.273Z",
+    "author": 1,
+    "body": "<p><span><b>Flask</b> — фреймворк для создания веб-приложений на языке \r\nпрограммирования Python, использующий набор инструментов Werkzeug, а \r\nтакже шаблонизатор Jinja2. Относится к категории так называемых \r\nмикрофреймворков — минималистичных каркасов веб-приложений, сознательно \r\nпредоставляющих лишь самые базовые возможности.</span></p>",
+    "publish": "2023-08-15T18:02:48Z",
+    "created": "2023-08-15T18:03:13.642Z",
+    "updated": "2023-08-15T18:06:12.253Z",
     "status": "PB",
     "slug": "flask"
   }
 },
 {
   "model": "blog.post",
-  "pk": 7,
+  "pk": 3,
   "fields": {
-    "title": "Classes",
-    "author": 2,
-    "body": "Финальный \"босс\" классического питона",
-    "publish": "2023-07-26T11:49:50Z",
-    "created": "2023-07-26T11:50:18.120Z",
-    "updated": "2023-07-26T11:50:42.488Z",
+    "title": "FastAPI",
+    "author": 1,
+    "body": "<h2 class=\"qrShPb pXs6bb PZPZlf q8U8x aTI8gc\" data-local-attribute=\"d3bn\" data-attrid=\"title\" data-ved=\"2ahUKEwijhoD2n9-AAxWzFxAIHbLbDioQ3B0oAXoECEUQEQ\"><span></span></h2><div class=\"kno-rdesc\"><span><b>FastAPI\r\n </b>— веб-фреймворк для создания API, написанный на Python. Один из самых \r\nбыстрых и популярных веб-фреймворков, написанных на Python.</span></div><p></p>",
+    "publish": "2023-08-15T18:03:15Z",
+    "created": "2023-08-15T18:03:47.571Z",
+    "updated": "2023-08-15T18:06:16.242Z",
     "status": "PB",
-    "slug": "classes"
+    "slug": "fastapi"
   }
 },
 {
   "model": "blog.post",
-  "pk": 9,
-  "fields": {
-    "title": "Проверка добавления текста",
-    "author": 2,
-    "body": "Текст сообщения",
-    "publish": "2023-08-01T11:35:57.408Z",
-    "created": "2023-08-01T11:35:57.409Z",
-    "updated": "2023-08-01T16:03:23.596Z",
-    "status": "DF",
-    "slug": ""
-  }
-},
-{
-  "model": "blog.comment",
-  "pk": 1,
-  "fields": {
-    "post": 7,
-    "name": "Маша",
-    "email": "masha.shabusheva99@mail.ru",
-    "body": "<p><b>Я Маша </b><i>я пишу</i><u> комментарий</u> <img style=\"width: 698px;\" src=\"/media/django-summernote/2023-07-27/eb185005-932c-4159-ac78-06e258028198.jpg\"><br></p>",
-    "created": "2023-07-27T20:18:45.244Z",
-    "updated": "2023-07-27T20:18:45.244Z",
-    "active": true
-  }
-},
-{
-  "model": "accounts.profile",
-  "pk": 1,
-  "fields": {
-    "user": 2,
-    "avatar": "default.jpg",
-    "bio": ""
-  }
-},
-{
-  "model": "accounts.profile",
-  "pk": 2,
-  "fields": {
-    "user": 6,
-    "avatar": "default.jpg",
-    "bio": "Backend-developer from Moskau"
-  }
-},
-{
-  "model": "accounts.profile",
-  "pk": 3,
-  "fields": {
-    "user": 7,
-    "avatar": "default.jpg",
-    "bio": ""
-  }
-},
-{
-  "model": "accounts.profile",
   "pk": 4,
   "fields": {
-    "user": 8,
-    "avatar": "default.jpg",
-    "bio": ""
+    "title": "Frameworks Battle",
+    "author": 1,
+    "body": "<p>Django is perfect if you want to build robust full-stack websites \r\nbecause it has several functionalities and works very well in \r\nproduction.\r\n</p><p>Flask is ideal for machine learning engineers or developers who want \r\nto quickly prototype a web application and build APIs easily and \r\nquickly. At the same time, FastAPI is perfect if you’re looking for \r\nspeed or scalability. It is always wise to choose a framework based on \r\nwhat you want to use it for, but generally, they are all good and have a\r\n good market demand.</p>",
+    "publish": "2023-08-15T18:04:38Z",
+    "created": "2023-08-15T18:05:09.539Z",
+    "updated": "2023-08-15T18:06:04.151Z",
+    "status": "PB",
+    "slug": "frameworks-battle"
   }
 },
 {
   "model": "accounts.profile",
-  "pk": 5,
+  "pk": 1,
   "fields": {
-    "user": 9,
+    "user": 1,
     "avatar": "default.jpg",
     "bio": ""
   }
@@ -1284,17 +1103,17 @@
 {
   "model": "taggit.tag",
   "pk": 1,
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
   "fields": {
     "name": "framework",
     "slug": "framework"
-  }
-},
-{
-  "model": "taggit.tag",
-  "pk": 2,
-  "fields": {
-    "name": "flask",
-    "slug": "flask"
   }
 },
 {
@@ -1309,16 +1128,16 @@
   "model": "taggit.tag",
   "pk": 4,
   "fields": {
-    "name": "django",
-    "slug": "django"
+    "name": "flask",
+    "slug": "flask"
   }
 },
 {
   "model": "taggit.tag",
   "pk": 5,
   "fields": {
-    "name": "etc",
-    "slug": "etc"
+    "name": "fastapi",
+    "slug": "fastapi"
   }
 },
 {
@@ -1326,8 +1145,8 @@
   "pk": 1,
   "fields": {
     "tag": 1,
-    "content_type": 7,
-    "object_id": 6
+    "content_type": 8,
+    "object_id": 1
   }
 },
 {
@@ -1335,8 +1154,8 @@
   "pk": 2,
   "fields": {
     "tag": 2,
-    "content_type": 7,
-    "object_id": 6
+    "content_type": 8,
+    "object_id": 1
   }
 },
 {
@@ -1344,17 +1163,17 @@
   "pk": 3,
   "fields": {
     "tag": 3,
-    "content_type": 7,
-    "object_id": 6
+    "content_type": 8,
+    "object_id": 1
   }
 },
 {
   "model": "taggit.taggeditem",
   "pk": 4,
   "fields": {
-    "tag": 1,
-    "content_type": 7,
-    "object_id": 5
+    "tag": 2,
+    "content_type": 8,
+    "object_id": 2
   }
 },
 {
@@ -1362,8 +1181,8 @@
   "pk": 5,
   "fields": {
     "tag": 3,
-    "content_type": 7,
-    "object_id": 5
+    "content_type": 8,
+    "object_id": 2
   }
 },
 {
@@ -1371,66 +1190,88 @@
   "pk": 6,
   "fields": {
     "tag": 4,
-    "content_type": 7,
-    "object_id": 5
+    "content_type": 8,
+    "object_id": 2
   }
 },
 {
   "model": "taggit.taggeditem",
   "pk": 7,
   "fields": {
+    "tag": 2,
+    "content_type": 8,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
     "tag": 3,
-    "content_type": 7,
-    "object_id": 7
+    "content_type": 8,
+    "object_id": 3
   }
 },
 {
-  "model": "social_django.usersocialauth",
-  "pk": 1,
+  "model": "taggit.taggeditem",
+  "pk": 9,
   "fields": {
-    "user": 7,
-    "provider": "github",
-    "uid": "69339223",
-    "extra_data": "{\"auth_time\": 1691945719, \"id\": 69339223, \"expires\": null, \"login\": \"BrikozO\", \"access_token\": \"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\", \"token_type\": \"bearer\"}",
-    "created": "2023-07-26T11:20:11.611Z",
-    "modified": "2023-08-13T16:55:19.915Z"
+    "tag": 5,
+    "content_type": 8,
+    "object_id": 3
   }
 },
 {
-  "model": "social_django.usersocialauth",
-  "pk": 2,
+  "model": "taggit.taggeditem",
+  "pk": 10,
   "fields": {
-    "user": 8,
-    "provider": "google-oauth2",
-    "uid": "moiapochta232@gmail.com",
-    "extra_data": "{\"auth_time\": 1690370769, \"expires\": 3599, \"token_type\": \"Bearer\", \"access_token\": \"ya29.a0AbVbY6M4SfiJzXFhuPD4Sadq-kN2t4UDZ_AAV8oOyRRHvNth6l4bz8v9O9KzN47rWsUCAmEi2gF2YvcWcSejfzBaoV5aJRsopXQYfdPo3KChRhiR2lO0qK0Py8uBeWiz1TqGJ-iRVtm1dfgO8zM3zHsIt67faCgYKASsSAQ4SFQFWKvPlkltKuYH2ufhpBnOgspvFuQ0163\"}",
-    "created": "2023-07-26T11:26:09.827Z",
-    "modified": "2023-07-26T11:26:09.828Z"
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 4
   }
 },
 {
-  "model": "django_summernote.attachment",
-  "pk": 1,
+  "model": "taggit.taggeditem",
+  "pk": 11,
   "fields": {
-    "name": "sql-0-min.jpg",
-    "file": "django-summernote/2023-07-27/eb185005-932c-4159-ac78-06e258028198.jpg",
-    "uploaded": "2023-07-27T20:18:32.007Z"
+    "tag": 2,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 3,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 4,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 5,
+    "content_type": 8,
+    "object_id": 4
   }
 },
 {
   "model": "authtoken.token",
-  "pk": "a8524338a789e0ae1d7cd13975f984b465a1a995",
+  "pk": "f2430e50b4a7545f38ea493ced8cf83a945d2fbd",
   "fields": {
-    "user": 2,
-    "created": "2023-08-02T10:19:48.700Z"
-  }
-},
-{
-  "model": "authtoken.token",
-  "pk": "ccb991b36cbeabe63e203dfc61102303cf9f134f",
-  "fields": {
-    "user": 9,
-    "created": "2023-08-02T10:29:39.417Z"
+    "user": 1,
+    "created": "2023-08-15T17:59:22.143Z"
   }
 }
 ]
