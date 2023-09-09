@@ -1,15 +1,10 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, filters
+from rest_framework.permissions import IsAuthenticated
 
 from blog.models import Post
 from .permissions import IsAuthorOrReadOnly, IsAdminOrReadOnly
 from .serializers import PostSerializer
-
-
-# class StandardResultsSetPagination(PageNumberPagination):
-#     page_size = 3
-#     page_size_query_param = 'page_size'
-#     max_page_size = 10
 
 
 class PostList(generics.ListCreateAPIView):
@@ -20,19 +15,10 @@ class PostList(generics.ListCreateAPIView):
     search_fields = ['body', 'author__username']
     ordering_fields = ['author_id', 'publish']
     ordering = ['body']
-    permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [IsAdminOrReadOnly, IsAuthenticated]
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     permission_classes = [IsAuthorOrReadOnly]
-    # permission_classes = (permissions.IsAdminUser, )
-
-# class UserPostList(generics.ListAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = PostSerializer
-#
-#     def get_queryset(self):
-#         user = self.kwargs['username']
-#         return Post.objects.filter(author=user)

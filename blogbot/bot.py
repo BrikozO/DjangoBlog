@@ -1,110 +1,127 @@
-import requests
-from telebot import types
+import asyncio
 
-from bot_config import bot, redis_client, response, basic_url
+from aiogram import F
+from aiogram.filters import Command, CommandObject
+from aiogram.types import Message, InlineKeyboardButton, KeyboardButton, CallbackQuery
+from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
+from aiohttp import ClientSession
 
-with redis_client:
-    def is_authorised(ignore_auth: bool = False):
-        def auth_decorator_logic(func):
-            def wrapper(*args, **kwargs):
-                user_token = redis_client.get(args[0].from_user.id)
-                if not ignore_auth:
-                    if user_token is not None:
-                        return func(*args, **kwargs)
-                    else:
-                        bot.send_message(args[0].chat.id, 'Для работы с ботом блога вам необходимо авторизоваться!')
+from bot_config import dp, redis_client, bot, basic_url
+
+
+def is_authorised(ignore_auth: bool = False):
+    def auth_decorator_logic(func):
+        async def wrapper(*args, **kwargs):
+            user_token = await redis_client.get(args[0].from_user.id)
+            if not ignore_auth:
+                if user_token is not None:
+                    return await func(*args)
                 else:
-                    if func.__name__ == 'auth_user' and user_token:
-                        bot.send_message(args[0].chat.id, 'Вы уже авторизованы!')
-                    else:
-                        return func(*args, **kwargs)
-
-            return wrapper
-
-        return auth_decorator_logic
-
-
-    def get_user_name(user_id):
-        return redis_client.get(user_id).decode('UTF-8').split('|')[1]
-
-
-    @bot.message_handler(commands=['start'])
-    @is_authorised(ignore_auth=True)
-    def start(message):
-        bot.send_message(message.chat.id,
-                         'Привет! Спасибо, что используете brikologot! Для того, чтобы узнать о функционале бота, введите: /help')
-
-
-    @bot.message_handler(commands=['help'])
-    @is_authorised(ignore_auth=True)
-    def help(message):
-        text = (
-            '`Здравствуйте! Вы пользуеетесь ботом` Brikologot`, созданным `*brikoz*` для тестирования API своего блога.\n'
-            'Если вы хотите получить доступ к сайту, перейдите по ссылке:` http://127\\.0\\.0\\.1:8000\n'
-            '`Однако, вы можете протестировать и фукнциональность бота, которая постоянно расширяется! '
-            'На данный момент вам доступно` 5 команд`:\n'
-            '/start - начало работы\n'
-            '/help - список команд и краткий экскурс\n'
-            '/auth - авторизация\n'
-            '/logout - выход из системы\n'
-            '/post_list - список опубликованных постов блога\n'
-            'Приятного использования!`')
-
-        bot.send_message(message.chat.id, text, parse_mode='MarkdownV2')
-
-
-    @bot.message_handler(commands=['post_list'])
-    @is_authorised()
-    def post_list(message):
-        markup = types.InlineKeyboardMarkup()
-        for item in response.json().get('results'):
-            url = basic_url + str(item['id'])
-            markup.add(types.InlineKeyboardButton(item['title'], url=url))
-        bot.send_message(message.from_user.id, 'Выберите пост', reply_markup=markup)
-
-
-    @bot.message_handler(commands=['auth'])
-    @is_authorised(ignore_auth=True)
-    def auth_user(message):
-        msg = bot.reply_to(message, 'Введите логин:')
-        bot.register_next_step_handler(msg, signup_login)
-
-
-    def signup_login(message):
-        login = message.text
-        msg = bot.send_message(message.chat.id, 'Введите пароль:')
-        bot.register_next_step_handler(msg, signup, login)
-
-
-    def signup(message, login):
-        password = message.text
-        sign_try = requests.post(basic_url + 'api-token-auth/',
-                                 data={'username': login, 'password': password})
-        if sign_try.json().get('token') is not None:
-            redis_client.set(name=message.from_user.id, value=sign_try.json().get('token') + '|' + f'{login}')
-            bot.send_message(message.chat.id, 'Вы успешно авторизованы!')
-        else:
-            bot.send_message(message.chat.id, 'Неверный логин или пароль!')
-
-
-    @bot.message_handler(commands=['logout'])
-    @is_authorised()
-    def logout(message):
-        markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton('Да', callback_data='logout_true'))
-        markup.add(types.InlineKeyboardButton('Нет', callback_data='logout_false'))
-        bot.reply_to(message, 'Вы уверены, что хотите выйти?', reply_markup=markup)
-
-
-    @bot.callback_query_handler(func=lambda call: True)
-    def callback(call):
-        if call.message:
-            if call.data == 'logout_true':
-                redis_client.delete(call.from_user.id)
-                bot.send_message(call.message.chat.id, 'Вы вышли из системы!')
+                    await bot.send_message(args[0].chat.id, 'Для работы с ботом блога вам необходимо авторизоваться!')
             else:
-                username = get_user_name(call.from_user.id)
-                bot.send_message(call.message.chat.id, f'Хорошо, {username}. Продолжайте работу с ботом!')
+                if func.__name__ == 'auth_user' and user_token:
+                    await bot.send_message(args[0].chat.id, 'Вы уже авторизованы!')
+                else:
+                    return await func(command=kwargs.get('command'), *args)
+
+        return wrapper
+
+    return auth_decorator_logic
 
 
-    bot.polling()
+# json data
+async def get_json(token: str = None):
+    params = {'Authorization': 'Token ' + token, }
+    async with ClientSession(headers=params) as session:
+        async with session.get(url=basic_url) as response:
+            data = await response.json()
+            return data
+
+
+@dp.message(Command(commands=["start"]))
+async def process_start_command(message: Message):
+    builder = ReplyKeyboardBuilder()
+    builder.row(KeyboardButton(text='Ссылка на сайт'),
+                KeyboardButton(text='Ссылка на github'))
+    await message.answer(
+        'Привет! Спасибо, что используете brikologot! Для того, чтобы узнать о функционале бота, введите: /help',
+        reply_markup=builder.as_markup(resize_keyboard=True))
+
+
+@dp.message(Command(commands=['help']))
+async def process_help_command(message: Message):
+    text = (
+        '`Здравствуйте! Вы пользуеетесь ботом` Brikologot`, созданным `*brikoz*` для тестирования API своего блога.\n'
+        'Если вы хотите получить доступ к сайту, перейдите по ссылке:` http://127\\.0\\.0\\.1:8000\n'
+        '`Однако, вы можете протестировать и фукнциональность бота, которая постоянно расширяется! '
+        'На данный момент вам доступно` 5 команд`:\n'
+        '/start - начало работы\n'
+        '/help - список команд и краткий экскурс\n'
+        '/auth - авторизация\n'
+        '/logout - выход из системы\n'
+        '/post_list - список опубликованных постов блога\n'
+        'Приятного использования!`')
+    await message.answer(text=text, parse_mode='MarkdownV2')
+
+
+@dp.message(Command(commands=['logout']))
+@is_authorised()
+async def logout(message: Message):
+    builder = InlineKeyboardBuilder()
+    builder.add(InlineKeyboardButton(text='Да', callback_data='logout_accepted'))
+    builder.add(InlineKeyboardButton(text='Нет', callback_data='logout_rejected'))
+    await message.answer('Вы уверены что хотите выйти?', reply_markup=builder.as_markup())
+
+
+@dp.callback_query(F.data == 'logout_accepted')
+async def logout_accepted(callback: CallbackQuery):
+    await redis_client.delete(callback.from_user.id)
+    await callback.message.answer('Вы вышли из системы!')
+
+
+@dp.callback_query(F.data == 'logout_rejected')
+async def logout_rejected(callback: CallbackQuery):
+    await callback.message.answer('Хорошо. Продолжайте работу с ботом!')
+
+
+@dp.message(Command(commands=['auth']))
+@is_authorised(ignore_auth=True)
+async def auth_user(message: Message, command: CommandObject):
+    if command.args:
+        try:
+            username, password = command.args.split()
+            async with ClientSession() as session:
+                user_info = {'username': username, 'password': password}
+                async with session.post(url=basic_url + 'api-token-auth/', data=user_info) as response:
+                    data = await response.json()
+                    if data.get('token') is not None:
+                        await redis_client.set(name=message.from_user.id, value=data.get('token') + '|' + f'{username}')
+                        await message.answer('Вы успешно авторизованы!')
+                    else:
+                        await message.answer('Неверные имя пользователя или пароль!')
+        except:
+            await message.answer('Ошибка: некорректно введенные данные!')
+    else:
+        await message.answer('Введите логин и пароль через пробел после команды!')
+
+
+@dp.message(Command(commands=['post_list']))
+@is_authorised()
+async def post_list(message: Message):
+    builder = InlineKeyboardBuilder()
+    token = await redis_client.get(message.from_user.id)
+    data = await get_json(token=token.split('|')[0])
+    for item in data['results']:
+        url = basic_url + str(int(item['id']))
+        builder.add(InlineKeyboardButton(text=item['title'], url=url))
+    builder.adjust(3)
+    await message.answer(text='Выберите пост', reply_markup=builder.as_markup())
+
+
+async def main():
+    await dp.start_polling(bot)
+    await asyncio.create_task(get_json())
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
