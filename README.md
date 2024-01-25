@@ -8,6 +8,6 @@
 - Django
 - Django-REST
 - PostgreSQL
-- pyTelegramBotAPI
+- Aiogram
 - Redis
 
